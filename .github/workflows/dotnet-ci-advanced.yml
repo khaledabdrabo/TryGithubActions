@@ -17,6 +17,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Install OpenSSL
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libssl1.1
+
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
@@ -84,4 +89,5 @@ jobs:
       - name: Run the published application
         run: |
           echo "Running the published application..."
-          ./downloaded-artifacts/my-console-app/my-console-app
+          chmod +x ./downloaded-artifacts/my-console-app
+          ./downloaded-artifacts/my-console-app
