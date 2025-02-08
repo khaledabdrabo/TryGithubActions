@@ -83,4 +83,4 @@ jobs:
       - name: Run the published application
         run: |
           echo "Running the published application..."
-          ./downloaded-artifacts/MyConsoleApp
+          ./downloaded-artifacts/my-console-app
