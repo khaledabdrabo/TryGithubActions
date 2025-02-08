@@ -58,7 +58,7 @@ jobs:
         run: dotnet build --no-restore --configuration Release
 
       - name: Publish the project
-        run: dotnet publish -c Release -o ./publish
+        run: dotnet publish GithubActions/GithubActions.csproj -c Release -o ./publish
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
@@ -84,5 +84,5 @@ jobs:
       - name: Run the published application
         run: |
           echo "Running the published application..."
-          chmod +x ./downloaded-artifacts/my-console-app
-          ./downloaded-artifacts/my-console-app
+          chmod +x ./downloaded-artifacts/GithubActions
+          ./downloaded-artifacts/GithubActions
