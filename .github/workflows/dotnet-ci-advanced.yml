@@ -65,6 +65,7 @@ jobs:
         with:
           name: my-console-app
           path: ./publish
+
   use-artifacts:
     runs-on: ubuntu-latest
     needs: publish-artifacts
@@ -83,4 +84,4 @@ jobs:
       - name: Run the published application
         run: |
           echo "Running the published application..."
-          ./downloaded-artifacts/my-console-app
+          ./downloaded-artifacts/my-console-app/my-console-app
