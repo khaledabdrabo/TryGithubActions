@@ -6,3 +6,8 @@ jobs:
     steps:
       - name: print hello world
         run: echo "Hello world"
+  greeting:
+    run-on: ubuntu-latest
+    steps: 
+      - name: say good morning
+      - run: echo "good morning"       
